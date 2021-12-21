@@ -1,4 +1,4 @@
-import 'package:exam2_movie/ui/search_screen.dart';
+import 'package:exam2_movie/ui/test_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SearchScreen(),
+      home: const TestScreen(),
     );
   }
 }

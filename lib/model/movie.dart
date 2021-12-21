@@ -12,4 +12,7 @@ class Movie {
         poster: 'https://image.tmdb.org/t/p/w500' + json['poster_path'],
         title: json['title']);
   }
+  static List<Movie> listToMovies(List jsonList) {
+    return jsonList.map((e) => Movie.fromJson(e)).toList();
+  }
 }
