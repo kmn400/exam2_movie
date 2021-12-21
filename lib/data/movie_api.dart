@@ -12,7 +12,7 @@ class MovieApi {
       List jsonList = jsonDecode(response.body)['results'];
       return jsonList.map((e) => Movie.fromJson(e)).toList();
     } else {
-      throw Exception('Faile d to load album');
+      throw Exception('Failed to load album');
     }
   }
 }
