@@ -27,8 +27,8 @@ class _SearchScreenState extends State<SearchScreen> {
     super.dispose();
   }
 
-  Future<void> _showResult(String query) async {
-    List<Results> movies = await _api.fetchMovies(query);
+  Future<void> _showResult(String query1) async {
+    List<Results> movies = await _api.fetchMovies(query1);
     setState(() {
       _movies = movies;
     });
