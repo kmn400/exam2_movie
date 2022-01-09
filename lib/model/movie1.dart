@@ -56,7 +56,7 @@ class Dates {
 class Results {
   Results({
     required this.adult,
-    this.backdropPath,
+    required this.backdropPath,
     required this.genreIds,
     required this.id,
     required this.originalLanguage,

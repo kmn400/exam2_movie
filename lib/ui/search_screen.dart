@@ -1,5 +1,5 @@
 import 'package:exam2_movie/data/movie_api.dart';
-import 'package:exam2_movie/model/movie.dart';
+import 'package:exam2_movie/model/movie1.dart';
 import 'package:flutter/material.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -10,7 +10,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  List<Movie> _movies = [];
+  List<Results> _movies = [];
 
   final _api = MovieApi();
   final _textEditingController = TextEditingController();
@@ -18,7 +18,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void initState() {
     super.initState();
-    _showResult('');
+    _showResult('spider');
   }
 
   @override
@@ -28,7 +28,7 @@ class _SearchScreenState extends State<SearchScreen> {
   }
 
   Future<void> _showResult(String query) async {
-    List<Movie> movies = await _api.fetchMovies(query);
+    List<Results> movies = await _api.fetchMovies(query);
     setState(() {
       _movies = movies;
     });
@@ -58,7 +58,8 @@ class _SearchScreenState extends State<SearchScreen> {
               crossAxisCount: 3,
               mainAxisSpacing: 12,
               crossAxisSpacing: 0,
-              children: _movies.map((e) => Image.network(e.poster)).toList(),
+              children:
+                  _movies.map((e) => Image.network(e.posterPath)).toList(),
             ),
           ),
         ],
