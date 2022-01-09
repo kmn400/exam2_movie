@@ -38,7 +38,7 @@ class _SearchScreenState extends State<SearchScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('영화 정보 검색기'),
+        title: const Text('영화  정보 검색기'),
       ),
       body: Column(
         children: [
